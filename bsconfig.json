@@ -2,7 +2,7 @@
   "name": "atom-reason-starter",
   "ppx-flags": ["reason/reactjs_jsx_ppx.native"],
   "refmt": "reason/refmt_impl.native",
-  "bs-dependencies": ["reason-js"],
+  "bs-dependencies": ["reason-js", "rebase"],
   "sources": [
     "lib"
   ],

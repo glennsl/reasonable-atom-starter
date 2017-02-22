@@ -17,7 +17,8 @@
     "start": "bsb -make-world -w"
   },
   "dependencies": {
-    "reason-js": "glennsl/reason-js#maybe-functors"
+    "reason-js": "glennsl/reason-js#maybe-functors",
+    "rebase": "glennsl/rebase"
   },
   "devDependencies": {
     "bs-platform": "bloomberg/bucklescript",

@@ -7,7 +7,7 @@ type t = {
   element: element
 };
 
-let make : state => t = fun _ => {
+let make : option state => t = fun _ => {
   let element = document |> Document.createElement "div";
   Element.setClassName element "view";
 
@@ -20,5 +20,5 @@ let make : state => t = fun _ => {
 };
 
 let getElement : t => element = fun self => self.element;
-let serialize : t => Js.t {..} = fun _ => [%bs.raw "{}"];
+let serialize : t => state = fun _ => [%bs.raw "{}"];
 let destroy : t => unit = fun self => Element.remove self.element;
