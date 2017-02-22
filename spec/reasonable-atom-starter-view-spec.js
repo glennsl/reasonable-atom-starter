@@ -1,8 +1,8 @@
 'use babel';
 
-import AtomPkgTestView from '../lib/atom-pkg-test-view';
+import View from '../lib/js/lib/view';
 
-describe('AtomPkgTestView', () => {
+describe('View', () => {
   it('has one valid test', () => {
     expect('life').toBe('easy');
   });

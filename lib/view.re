@@ -12,8 +12,8 @@ let make : option state => t = fun _ => {
   Element.setClassName element "view";
 
   let message = document |> Document.createElement "div";
-  Element.setTextContent message "The atom-reason-starter package is Alive! It's ALIVE!";
-  Element.setClassName message "view";
+  Element.setTextContent message "The reasonable-atom-starter package is Alive! It's ALIVE!";
+  Element.setClassName message "reasonable-atom-starter";
   Element.appendChild (message |> Element.asNode) element;
 
   { element: element }

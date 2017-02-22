@@ -1,12 +1,12 @@
 {
-  "name": "atom-reason-starter",
+  "name": "reasonable-atom-starter",
   "main": "./lib/js/lib/main",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "A very rough starter project for atom packages written in Reason and BuckleScript",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "atom-reason-starter:toggle"
+    "atom-workspace": "reasonable-atom-starter:toggle"
   },
   "repository": "https://github.com/atom/atom-pkg-test",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "scripts": {
+    "postinstall": "ln -s \"$(pwd)\" ~/.atom/packages/",
     "start": "bsb -make-world -w"
   },
   "dependencies": {

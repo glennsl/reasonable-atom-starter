@@ -1,5 +1,5 @@
 {
-  "name": "atom-reason-starter",
+  "name": "reasonable-atom-starter",
   "ppx-flags": ["reason/reactjs_jsx_ppx.native"],
   "refmt": "reason/refmt_impl.native",
   "bs-dependencies": ["reason-js", "rebase"],

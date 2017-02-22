@@ -1,7 +1,7 @@
 open Rebase;
 
 let toggle panel => {
-  Js.log "atom-reason-starter was toggled!";
+  Js.log "reasonable-atom-starter was toggled!";
   Atom.Panel.(isVisible panel ? hide panel : show panel);
 };
 
@@ -9,18 +9,18 @@ include Atom.Hooks {
   type state = {
     modalPanel: Atom.panel,
     subscriptions: Atom.compositeDisposable,
-    view: MyView.t
+    view: View.t
   };
 
   type serializedState = Js.t {.
-    viewState: MyView.state
+    viewState: View.state
   };
 
   let activate serializedState => {
     Js.log "activate";
-    let view = MyView.make (Option.map (fun s => s##viewState) serializedState);
+    let view = View.make (Option.map (fun s => s##viewState) serializedState);
     let modalPanel = Atom.Workspace.addModalPanel {
-      "item": MyView.getElement view,
+      "item": View.getElement view,
       "visible": Js.false_
     };
 
@@ -28,7 +28,7 @@ include Atom.Hooks {
 
     Atom.CompositeDisposable.add subscriptions
       (Atom.Commands.add "atom-workspace" {
-        "atom-reason-starter:toggle": fun () => toggle modalPanel
+        "reasonable-atom-starter:toggle": fun () => toggle modalPanel
       });
 
     { view, modalPanel, subscriptions }
@@ -38,11 +38,11 @@ include Atom.Hooks {
     Js.log "deactivate";
     Atom.Panel.destroy state.modalPanel;
     Atom.CompositeDisposable.destroy state.subscriptions;
-    MyView.destroy state.view;
+    View.destroy state.view;
   };
 
   let serialize state => {
     Js.log "serialize";
-    { "viewState": MyView.serialize state.view }
+    { "viewState": View.serialize state.view }
   };
 };
