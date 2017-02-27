@@ -14,7 +14,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "scripts": {
-    "postinstall": "ln -s \"$(pwd)\" ~/.atom/packages/",
+    "postinstall": "ln -nsf \"$(pwd)\" ~/.atom/packages/",
     "start": "bsb -make-world -w"
   },
   "dependencies": {
