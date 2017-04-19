@@ -1,5 +1,5 @@
 {
   "name": "reasonable-atom-starter",
-  "bs-dependencies": ["bs-webapi", "rebase"],
+  "bs-dependencies": ["bs-atom", "bs-webapi", "rebase"],
   "sources": ["lib"]
 }

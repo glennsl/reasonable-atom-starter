@@ -3,8 +3,7 @@
   "main": "./lib/js/lib/main",
   "version": "0.0.0",
   "description": "A very rough starter project for atom packages written in Reason and BuckleScript",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "reasonable-atom-starter:toggle"
   },
@@ -18,6 +17,7 @@
     "start": "bsb -make-world -w"
   },
   "dependencies": {
+    "bs-atom": "github:glennsl/bs-atom",
     "reason-js": "BuckleTypes/bs-webapi-incubator",
     "rebase": "glennsl/rebase"
   },
