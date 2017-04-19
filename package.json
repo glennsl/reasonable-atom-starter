@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "reasonable-atom-starter:toggle"
   },
-  "repository": "https://github.com/atom/atom-pkg-test",
+  "repository": "https://github.com/glennsl/reasonable-atom-starter",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
