@@ -1,24 +1,23 @@
-open ReasonJs;
-open ReasonJs.Dom;
-
-type state;
+type state = unit;
 
 type t = {
-  element: element
+  element: Dom.element
 };
 
 let make : option state => t = fun _ => {
+  open ReasonJs.Dom;
+  
   let element = document |> Document.createElement "div";
   Element.setClassName element "view";
 
   let message = document |> Document.createElement "div";
   Element.setTextContent message "The reasonable-atom-starter package is Alive! It's ALIVE!";
   Element.setClassName message "reasonable-atom-starter";
-  Element.appendChild (message |> Element.asNode) element;
+  Element.appendChild message element;
 
   { element: element }
 };
 
-let getElement : t => element = fun self => self.element;
-let serialize : t => state = fun _ => [%bs.raw "{}"];
-let destroy : t => unit = fun self => Element.remove self.element;
+let getElement : t => Dom.element = fun self => self.element;
+let serialize : t => state = fun _ => ();
+let destroy : t => unit = fun self => ReasonJs.Dom.Element.remove self.element;

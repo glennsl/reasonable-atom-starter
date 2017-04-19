@@ -17,7 +17,6 @@ include Atom.Hooks {
   };
 
   let activate serializedState => {
-    Js.log "activate";
     let view = View.make (Option.map (fun s => s##viewState) serializedState);
     let modalPanel = Atom.Workspace.addModalPanel {
       "item": View.getElement view,
@@ -35,14 +34,12 @@ include Atom.Hooks {
   };
 
   let deactivate state => {
-    Js.log "deactivate";
     Atom.Panel.destroy state.modalPanel;
     Atom.CompositeDisposable.destroy state.subscriptions;
     View.destroy state.view;
   };
 
   let serialize state => {
-    Js.log "serialize";
     { "viewState": View.serialize state.view }
   };
 };

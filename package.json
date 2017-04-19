@@ -18,11 +18,10 @@
     "start": "bsb -make-world -w"
   },
   "dependencies": {
-    "reason-js": "glennsl/reason-js#maybe-functors",
+    "reason-js": "BuckleTypes/bs-webapi-incubator",
     "rebase": "glennsl/rebase"
   },
   "devDependencies": {
-    "bs-platform": "bloomberg/bucklescript",
-    "reason": "facebook/reason"
+    "bs-platform": "bloomberg/bucklescript"
   }
 }

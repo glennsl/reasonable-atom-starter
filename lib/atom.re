@@ -1,5 +1,3 @@
-open Rebase;
-
 type compositeDisposable;
 type disposable;
 type panel;
