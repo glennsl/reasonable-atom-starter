@@ -17,11 +17,11 @@
     "start": "bsb -make-world -w"
   },
   "dependencies": {
-    "bs-atom": "github:glennsl/bs-atom",
-    "reason-js": "BuckleTypes/bs-webapi-incubator",
+    "bs-atom": "glennsl/bs-atom",
+    "reason-js": "reasonml-community/bs-webapi-incubator",
     "rebase": "glennsl/rebase"
   },
   "devDependencies": {
-    "bs-platform": "bloomberg/bucklescript"
+    "bs-platform": "bucklescript/bucklescript"
   }
 }
