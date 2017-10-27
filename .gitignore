@@ -18,3 +18,4 @@ lib/js/**
 node_modules
 *.log
 .merlin
+.bsb.lock
